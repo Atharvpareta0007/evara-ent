@@ -1,0 +1,218 @@
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --bg-dark: #0a0c10;
+  --bg-surface: #11141b;
+  --bg-card: rgba(18, 22, 31, 0.75);
+  --bg-glass: rgba(18, 22, 31, 0.85);
+  --bg-card-hover: rgba(28, 34, 48, 0.85);
+
+  --gold-300: #f5e4b7;
+  --gold-400: #e2c070;
+  --gold-500: #d4af37;
+  --gold-600: #b59024;
+  --gold-700: #8c6e18;
+  
+  --gold-gradient: linear-gradient(135deg, #faecd0 0%, #d4af37 55%, #a67c1e 100%);
+  --gold-gradient-soft: linear-gradient(135deg, rgba(212, 175, 55, 0.18) 0%, rgba(212, 175, 55, 0.04) 100%);
+  --dark-gradient: linear-gradient(180deg, rgba(10, 12, 16, 0.95) 0%, rgba(10, 12, 16, 0.98) 100%);
+  
+  --text-pure: #ffffff;
+  --text-main: #f5f3ef;
+  --text-muted: #a39e93;
+  --text-dim: #706b61;
+
+  --border-gold: rgba(212, 175, 55, 0.28);
+  --border-gold-glow: rgba(212, 175, 55, 0.5);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --shadow-gold: 0 8px 32px -4px rgba(212, 175, 55, 0.2);
+  --shadow-card: 0 16px 40px -10px rgba(0, 0, 0, 0.6);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-dark);
+  line-height: 1.6;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-gold-gradient {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Luxury Global Decorative Glows */
+.ambient-glow-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(10, 12, 16, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Button & interactive components */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--gold-gradient);
+  color: #0d0f14;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+  filter: brightness(1.05);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--gold-400);
+  border: 1px solid var(--border-gold);
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline-gold:hover {
+  border-color: var(--gold-400);
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--text-pure);
+  transform: translateY(-2px);
+}
+
+.badge-luxury {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--gold-gradient-soft);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-300);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+}
+
+.glass-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.7), 0 0 25px -8px rgba(212, 175, 55, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090b0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #252b39;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-600);
+}
+
+/* Section Dividers */
+.section-gold-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gold-gradient);
+  margin: 16px auto;
+  border-radius: 2px;
+}
+
+.section-gold-line.left-align {
+  margin: 16px 0;
+}

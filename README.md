@@ -1,17 +1,46 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
 # evara-ent
+
+A bespoke luxury wedding and high-profile celebration planning web application built with React, Vite, and modern styling, inspired by Krayonz Entertainment.
+
+## 🌟 Highlights & Features
+- **Luxury Aesthetic**: Curated color palette (Noir & Champagne Gold) with Cormorant Garamond typography and glassmorphic micro-interactions.
+- **Responsive Navigation**: Sticky header with top contact strip, mega-dropdown for services, and mobile-friendly slide-out drawer.
+- **Comprehensive Modules**:
+  - **Hero Section**: 30+ years legacy showcase, live credibility stats, and dual call-to-actions.
+  - **About Section**: Founder Achint Sudarshan Nag's philosophy, 30-year heritage, and core pillars.
+  - **Services Breakdown**: A-to-Z execution checklist, VIP Concierge, Artist Management, Decor Scenography, and Family Shadows.
+  - **Real Weddings**: Destination stories from Bali, Abu Dhabi, Hua Hin, Jaisalmer, Bengaluru, and Bahrain with category filtering.
+  - **Event Gallery**: Curated photo portfolio with category filters and high-resolution Lightbox view.
+  - **Press & Testimonials**: Media coverage (WeddingSutra, WedMeGood, Silicon India, WeddingBazaar) & couple reviews.
+  - **Contact & Headquarters**: Mumbai office details, direct telephonic & WhatsApp access, inquiry form, and FAQs.
+- **Interactive Modals**: Full-featured private consultation booking modal with validation.
+- **Floating Action Dock**: Instant WhatsApp chat and event inquiry buttons.
+
+## 🛠️ Technology Stack
+- **Framework**: React 19 + Vite 8
+- **Icons**: Lucide React + custom inline SVGs
+- **Typography**: Cormorant Garamond & Plus Jakarta Sans via Google Fonts
+
+## 🚀 Getting Started
+
+### Prerequisites
+Node.js (v18+)
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/Atharvpareta0007/evara-ent.git
+cd evara-ent
+
+# Install dependencies
+npm install
+
+# Start local development server
+npm run dev
+```
+
+### Production Build
+```bash
+npm run build
+npm run preview
+```
